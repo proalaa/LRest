@@ -17,3 +17,13 @@ Route::get('/', function () {
 
 Route::get('index','TemplateController@index');
 Route::get('menu' , 'TemplateController@menu');
+Route::get('about' , 'TemplateController@about');
+Route::get('specialties' , 'TemplateController@specialties');
+Route::get('services' , 'TemplateController@services');
+Route::get('blog' , 'TemplateController@blog');
+Route::get('contact' , 'TemplateController@contact');
+Route::get('reservation' , 'TemplateController@reservation');
+
+
+
+

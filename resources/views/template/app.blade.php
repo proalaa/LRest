@@ -38,19 +38,20 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="menu" class="nav-link">Menu</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Specialties</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Reservation</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+            <li class="nav-item {{ (request()->is('index')?'active':'')}}"><a href="index" class="nav-link">Home</a></li>
+            <li class="nav-item {{ (request()->is('menu')?'active':'')}}"><a href="menu" class="nav-link">Menu</a></li>
+            <li class="nav-item {{ (request()->is('specialties')?'active':'')}}"><a href="specialties" class="nav-link">Specialties</a></li>
+            <li class="nav-item {{ (request()->is('reservation')?'active':'')}}"><a href="reservation" class="nav-link">Reservation</a></li>
+            <li class="nav-item {{ (request()->is('blog')?'active':'')}}"><a href="blog" class="nav-link">Blog</a></li>
+            <li class="nav-item {{ (request()->is('about')?'active':'')}}"><a href="about" class="nav-link">About</a></li>
+            <li class="nav-item {{ (request()->is('contact')?'active':'')}}"><a href="contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- END nav -->
-    
+    <?php if(request()->is('index*')){ ?>
+
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url('images/bg_1.jpg');">
         <div class="overlay"></div>
@@ -88,6 +89,29 @@
         </div>
       </div>
     </section>
+
+    
+
+    <?php }else{?>
+
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-10 col-sm-12 ftco-animate text-center">
+              <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>{{$name}}</span></p>
+              <h1 class="mb-3">{{$name}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <?php }?>
+   
     <!-- END slider -->
 
 

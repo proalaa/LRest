@@ -1,6 +1,7 @@
 @extends('template.app')
 @section('title' , 'Home')
 @section('content')
+<!-- @include('includes.slider') -->
 <div class="ftco-section-reservation">
       <div class="container">
         <div class="row">

@@ -8,11 +8,43 @@ class TemplateController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $name = 'Home';
+        return view('index',compact('name'));
     }
 
     public function menu()
     {
-        return view('menu');
+        $name = 'Menu';
+        return view('menu',compact('name'));
+    }
+    public function services()
+    {
+        $name = 'Services';
+        return view('services' , compact('name'));
+    }
+    public function reservation()
+    {
+        $name = 'Reservation';
+        return view('reservation' , compact('name'));
+    }
+    public function about()
+    {
+        $name = 'About';
+        return view('about' , compact('name'));
+    }
+    public function blog()
+    {
+        $name = 'Blog';
+        return view('blog' , compact('name'));
+    }
+    public function specialties()
+    {
+        $name = 'Specialties';
+        return view('specialties' , compact('name'));
+    }
+    public function contact()
+    {
+        $name = 'Contact';
+        return view('contact' , compact('name'));
     }
 }

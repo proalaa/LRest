@@ -430,7 +430,7 @@
               </div>
               <div class="col-sm-12 pt-4 text-center ftco-animate">
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
-                <span><a href="reservation.html" class="btn btn-primary btn-outline-primary p-3">Make a Reservation</a></span>
+                <span><a href="reservation" class="btn btn-primary btn-outline-primary p-3">Make a Reservation</a></span>
               </div>
             </div>
           </div>

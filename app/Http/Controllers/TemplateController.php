@@ -22,11 +22,7 @@ class TemplateController extends Controller
         $name = 'Services';
         return view('services' , compact('name'));
     }
-    public function reservation()
-    {
-        $name = 'Reservation';
-        return view('reservation' , compact('name'));
-    }
+ 
     public function about()
     {
         $name = 'About';

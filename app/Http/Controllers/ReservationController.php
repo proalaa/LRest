@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
 
 class ReservationController extends Controller
 {
@@ -14,7 +15,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $name = 'Reservation';
+        return view('reservation' ,compact('name'));
     }
 
     /**
@@ -35,7 +37,23 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            "name" => "required",
+            "phone_number"=> "required",
+            "when"=>"required",
+            "at"=>'required',
+            "person"=>'required:integer'
+        ];
+        $customMessage = [
+            'required'=> 'Ooh!, you must fill :attribute field'
+        ];
+
+        $data = $this->validate($request, $rules,$customMessage);
+
+
+        reservation::create($data);
+
+        return redirect()->back();
     }
 
     /**

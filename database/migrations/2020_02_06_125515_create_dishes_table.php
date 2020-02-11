@@ -18,6 +18,7 @@ class CreateDishesTable extends Migration
             $table->string('name',30)->unique();
             $table->longText('desc');
             $table->decimal('price');
+            $table->boolean('avialable');
             $table->timestamps();
         });
     }

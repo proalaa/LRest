@@ -146,6 +146,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'at'=>'time',
+        'when'=>'date'
+    ],
 
 ];

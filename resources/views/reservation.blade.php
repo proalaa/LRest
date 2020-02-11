@@ -11,36 +11,32 @@
         <div class="row d-flex">
           <div class="col-md-4 ftco-animate img" style="background-image: url(images/bg_1.jpg);"></div>
           <div class="col-md-8 ftco-animate makereservation p-5 bg-light">
-            <form action="#">
+            <form action="/reservation" method="post">
+              @csrf
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Name</label>
-                    <input type="text" class="form-control" placeholder="Your Name">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="text" class="form-control" placeholder="Your Email">
+                    <input type="text" name='name'class="form-control" placeholder="Your Name">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Phone</label>
-                    <input type="text" class="form-control" placeholder="Phone">
+                    <input type="text" name='phone_number' class="form-control" placeholder="Phone">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="">Phone</label>
-                    <input type="text" class="form-control" id="book_date" placeholder="Date">
+                    <label for="">Date</label>
+                    <input type="text" name='when' class="form-control" id="book_date" placeholder="Date">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Time</label>
-                    <input type="text" class="form-control" id="book_time" placeholder="Time">
+                    <input type="text" name='at' class="form-control" id="book_time" placeholder="Time">
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -48,19 +44,20 @@
                     <label for="">Person</label>
                     <div class="select-wrap one-third">
                       <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
+                      <select  name='person' id="" class="form-control">
                         <option value="">Person</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4+</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4+">4+</option>
                       </select>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-md-12 mt-3">
                   <div class="form-group">
-                    <input type="submit" value="Make a Reservation" role="button"class="btn btn-primary py-3 px-5" data-toggle="modal" data-target="#resModal">
+                    <input type="submit" value="Make a Reservation" role="button"class="btn btn-primary py-3 px-5" >
                   </div>
                 </div>
               </div>
@@ -69,33 +66,11 @@
         </div>
       </div>
     </section>
-    
-    
-    <!-- The Modal -->
-    <div class="modal fade" id="resModal">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-    
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body">
-            Modal body..
-          </div>
-    
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-    
-        </div>
-      </div>
-    </div>
-    <!-- The Modal -->
+
+
+
+
+
     <section class="instagram">
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center pb-5">

@@ -18,25 +18,25 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Name</label>
-                    <input type="text" name='name'class="form-control" placeholder="Your Name">
+                    <input type="text" name='name'class="form-control" placeholder="Your Name" value="{{old('name') ?? $reservation->name}}">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Phone</label>
-                    <input type="text" name='phone_number' class="form-control" placeholder="Phone">
+                    <input type="text" name='phone_number' class="form-control" placeholder="Phone" value="{{old('phone_number') , $reservation->phone_number}}">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Date</label>
-                    <input type="text" name='when' class="form-control" id="book_date" placeholder="Date">
+                    <input type="text" name='when' class="form-control" id="book_date" placeholder="Date" value="{{old('when') , $reservation->when}}">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Time</label>
-                    <input type="text" name='at' class="form-control" id="book_time" placeholder="Time">
+                    <input type="text" name='at' class="form-control" id="book_time" placeholder="Time" value="{{old('at') , $reservation->at}}">
                   </div>
                 </div>
                 <div class="col-md-6">

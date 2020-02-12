@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Reservation;
 use Illuminate\Http\Request;
 
 class TemplateController extends Controller
@@ -22,7 +23,7 @@ class TemplateController extends Controller
         $name = 'Services';
         return view('services' , compact('name'));
     }
- 
+
     public function about()
     {
         $name = 'About';
@@ -37,6 +38,13 @@ class TemplateController extends Controller
     {
         $name = 'Specialties';
         return view('specialties' , compact('name'));
+    }
+
+    public function reservation()
+    {
+        $reservation = new Reservation();
+        $name = 'Reservation';
+        return view('reservation',['reservation' => $reservation,'name' => $name]);
     }
     public function contact()
     {

@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-md-12 reservation pt-5 px-5">
             <div class="block-17">
-              <form action="/reservation" method="post" class="d-block d-lg-flex">
+              <form action="/reservation " method="post" class="d-block d-lg-flex">
 
                 @csrf
 

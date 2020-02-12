@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\reservation;
+use App\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
 
@@ -15,8 +15,9 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        $name = 'Reservation';
-        return view('reservation' ,compact('name'));
+        $reservations = Reservation::all();
+
+        return view('Admin.dashboard' , compact('reservations'));
     }
 
     /**
@@ -24,10 +25,7 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -51,7 +49,7 @@ class ReservationController extends Controller
         $data = $this->validate($request, $rules,$customMessage);
 
 
-        reservation::create($data);
+        Reservation::create($data);
 
         return redirect()->back();
     }
@@ -64,7 +62,7 @@ class ReservationController extends Controller
      */
     public function show(reservation $reservation)
     {
-        //
+
     }
 
     /**

@@ -14,7 +14,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        return redirect()->route('menu');
     }
 
     /**
@@ -22,10 +22,7 @@ class DishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.

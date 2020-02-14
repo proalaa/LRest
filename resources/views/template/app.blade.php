@@ -38,7 +38,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item {{ (request()->is('home')?'active':'')}}"><a href="home" class="nav-link">Home</a></li>
+            <li class="nav-item {{ (request()->is('main')?'active':'')}}"><a href="main" class="nav-link">Home</a></li>
             <li class="nav-item {{ (request()->is('menu')?'active':'')}}"><a href="menu" class="nav-link">Menu</a></li>
             <li class="nav-item {{ (request()->is('specialties')?'active':'')}}"><a href="specialties" class="nav-link">Specialties</a></li>
             <li class="nav-item {{ (request()->is('reservation')?'active':'')}}"><a href="reservation" class="nav-link">Reservation</a></li>

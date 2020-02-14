@@ -51,7 +51,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <textarea rows="6" cols="80" class="form-control" name="desc" placeholder="Here can be your description"></textarea>
+                                        <textarea rows="6" cols="80" class="form-control" name="desc"  placeholder="Here can be your description">{{$dish->desc}}</textarea>
                                     </div>
                                 </div>
                             </div>

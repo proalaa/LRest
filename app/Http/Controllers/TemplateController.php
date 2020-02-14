@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Dish;
 use App\Reservation;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,9 @@ class TemplateController extends Controller
     public function index()
     {
         $name = 'Home';
-        return view('index',compact('name'));
+        $dishes = Dish::all();
+
+        return view('index',['name'=>$name , 'dishes'=>$dishes]);
     }
 
     public function menu()

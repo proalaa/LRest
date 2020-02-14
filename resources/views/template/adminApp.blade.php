@@ -22,8 +22,9 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('images/apple-icon.png')}}">
     <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
-        Now UI Dashboard by Creative Tim
+        {{config('app.name' , 'LRest') . "- Admin"}}
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -47,7 +48,7 @@
                 CT
             </a>
             <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                Creative Tim
+               {{config('app.name' , 'LRest')}}
             </a>
         </div>
         <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -122,7 +123,8 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#" onclick="event.preventDefault();document.getElementById('logoutForm').submit()">{{__('Logout')}}</a>
+
                             </div>
                         </li>
                         <li class="nav-item">
@@ -138,7 +140,9 @@
             </div>
         </nav>
         <!-- End Navbar -->
-
+        <form id="logoutForm" action="{{route('logout')}}" method="POST">
+            @csrf
+        </form>
         @yield('content')
 
         <footer class="footer">

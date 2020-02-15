@@ -11,15 +11,20 @@ class TemplateController extends Controller
     public function index()
     {
         $name = 'Home';
-        $dishes = Dish::all();
-
-        return view('index',['name'=>$name , 'dishes'=>$dishes]);
+        $mains = Dish::where('catogry' , 'main')->get();
+        $desserts = Dish::where('catogry' , 'dessert')->get();
+        $drinks = Dish::where('catogry' , 'drink')->get();
+        return view('index',['name'=>$name , 'mains'=>$mains , 'desserts'=>$desserts, 'drinks'=>$drinks]);
     }
 
     public function menu()
     {
         $name = 'Menu';
-        return view('menu',compact('name'));
+
+        $mains = Dish::where('catogry' , 'main')->get();
+        $desserts = Dish::where('catogry' , 'dessert')->get();
+        $drinks = Dish::where('catogry' , 'drink')->get();
+        return view('menu',['name' => $name,'mains'=>$mains , 'desserts'=>$desserts, 'drinks'=>$drinks]);
     }
     public function services()
     {

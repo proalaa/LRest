@@ -18,109 +18,68 @@
                 <div class="tab-content py-5" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="row">
+                            @foreach($mains as $main)
                             <div class="col-lg-6">
                                 <div class="menus d-flex ftco-animate">
                                     <div class="menu-img" style="background-image: url(images/dish-3.jpg);"></div>
                                     <div class="text d-flex">
                                         <div class="one-half">
-                                            <h3>Grilled Beef with potatoes</h3>
-                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                                            <h3>{{$main->name}}</h3>
                                         </div>
                                         <div class="one-forth">
-                                            <span class="price">$29</span>
+                                            <span class="price">${{$main->price}}</span>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+                            @endforeach
 
-                            <div class="col-lg-6">
-                                <div class="menus d-flex ftco-animate">
-                                    <div class="menu-img" style="background-image: url(images/dish-8.jpg);"></div>
-                                    <div class="text d-flex">
-                                        <div class="one-half">
-                                            <h3>Savory Watercress Chinese Pancakes</h3>
-                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                                        </div>
-                                        <div class="one-forth">
-                                            <span class="price">$29</span>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
                         </div>
                     </div><!-- END -->
 
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                         <div class="row">
+                            @foreach($desserts as $dessert)
                             <div class="col-lg-6">
                                 <div class="menus d-flex ftco-animate">
                                     <div class="menu-img" style="background-image: url(images/dessert-1.jpg);"></div>
                                     <div class="text d-flex">
                                         <div class="one-half">
-                                            <h3>Grilled Beef with potatoes</h3>
-                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                                            <h3>{{$dessert->name}}</h3>
                                         </div>
                                         <div class="one-forth">
-                                            <span class="price">$29</span>
+                                            <span class="price">${{$dessert->price}}</span>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-
-                            <div class="col-lg-6">
-                                <div class="menus d-flex ftco-animate">
-                                    <div class="menu-img" style="background-image: url(images/dessert-6.jpg);"></div>
-                                    <div class="text d-flex">
-                                        <div class="one-half">
-                                            <h3>Tiramisu</h3>
-                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                                        </div>
-                                        <div class="one-forth">
-                                            <span class="price">$29</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                            @endforeach
                         </div>
                     </div><!-- END -->
 
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                         <div class="row">
+                            @foreach($drinks as $drink)
                             <div class="col-lg-6">
                                 <div class="menus d-flex ftco-animate">
                                     <div class="menu-img" style="background-image: url(images/drink-1.jpg);"></div>
                                     <div class="text d-flex">
                                         <div class="one-half">
-                                            <h3>Lemon Juice</h3>
-                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                                            <h3>{{$drink->name}}</h3>
+{{--                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>--}}
                                         </div>
                                         <div class="one-forth">
-                                            <span class="price">$29</span>
+                                            <span class="price">${{$drink->price}}</span>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+                            @endforeach
 
-                            <div class="col-lg-6">
-                                <div class="menus d-flex ftco-animate">
-                                    <div class="menu-img" style="background-image: url(images/drink-6.jpg);"></div>
-                                    <div class="text d-flex">
-                                        <div class="one-half">
-                                            <h3>Beer</h3>
-                                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
-                                        </div>
-                                        <div class="one-forth">
-                                            <span class="price">$29</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
